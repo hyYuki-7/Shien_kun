@@ -1,0 +1,128 @@
+﻿body {
+  line-height: 1.5;
+  overflow-y: scroll;
+}
+
+.main {
+  text-align: center;
+}
+
+.color-red {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.color-green {
+  color: #01810c;
+  cursor: pointer;
+}
+
+#example {
+  margin: auto;
+}
+
+th {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  display: block;
+}
+
+.title .text {
+  text-align: left;
+  display: inline-block;
+}
+
+.postArea {
+  text-align: center;
+}
+
+.postArea p {
+  display: inline-block;
+  text-align: left;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+/*
+details
+================================================ */
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  margin: 20px 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.details_question {
+  margin-top: 200px;
+  margin-left: 260px;
+  margin-right: 260px;
+}
+
+.font_red {
+  color: #ff0000;
+}
+
+/*
+image
+================================================ */
+
+img {
+  width: 60%;
+  height: 60%;
+}
+
+/*
+COLORS
+================================================ */
+
+/* コピーライト */
+.copyright {
+  margin: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #7f7f7f;
+}
+
+.copyright small {
+  font-size: 11px;
+}
