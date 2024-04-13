@@ -1,27 +1,42 @@
-// JSONファイルからデータを読み込む
-fetch('./js/members.json')
-  .then((response) => response.json())
-  .then((data) => populateTable(data))
-  .catch((error) => console.error('JSON読み込みエラー:', error));
+// メンバー一覧
+const member = [
+  {
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+  },
+  {
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+  },
+  {
+    name: 'Michael Johnson',
+    email: 'michael.johnson@example.com',
+  },
+  {
+    name: 'Emily Brown',
+    email: 'emily.brown@example.com',
+  },
+  {
+    name: 'David Wilson',
+    email: 'david.wilson@example.com',
+  },
+];
 
-// テーブルにJSONデータを表示する関数
+populateTable(member);
+
+// テーブルにメンバーデータを表示する関数
 function populateTable(data) {
   var tableBody = document.getElementById('example');
 
-  // JSONデータから行を作成しテーブルに挿入
+  // メンバーデータから行を作成しテーブルに挿入
   data.forEach((member) => {
     var row = tableBody.insertRow();
     var nameCell = row.insertCell(0);
     var emailCell = row.insertCell(1);
     var copyCell = row.insertCell(2);
 
-    let color = 'color-red';
-
     nameCell.innerHTML = `<div class="member-name">${member.name}</div>`;
-    if (member.name === '小幡') {
-      color = 'color-green';
-    }
-    emailCell.innerHTML = `<input class="${color}" type="button" onclick="clickToClipboard('${member.name}', '${member.email}')" value="${member.email}" readonly>`;
+    emailCell.innerHTML = `<input class="emailAddress" type="button" onclick="clickToClipboard('${member.name}', '${member.email}')" value="${member.email}" readonly>`;
     copyCell.innerHTML = `<button onclick="copyToClipboard('${member.email}')">←コピー</button>`;
   });
 }
@@ -33,7 +48,10 @@ function copyToClipboard(text) {
     .then(() => {
       const url = 'https://www.yahoo.co.jp/';
       if (window.confirm(`${text}` + `\n \n${url} を開きます。よろしいでしょうか。`)) {
-        window.open(url, '_blank');
+        const newWindow = window.open(url, '_blank');
+        if (newWindow) {
+          newWindow.opener = null;
+        }
       } else {
         console.log('キャンセルされました');
       }

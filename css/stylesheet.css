@@ -7,18 +7,13 @@
   text-align: center;
 }
 
-.color-red {
-  color: #ff0000;
-  cursor: pointer;
-}
-
-.color-green {
-  color: #01810c;
-  cursor: pointer;
-}
-
 #example {
   margin: auto;
+}
+
+.emailAddress {
+  color: #ff0000;
+  cursor: pointer;
 }
 
 th {
@@ -49,22 +44,10 @@ button {
   display: inline-block;
 }
 
-.postArea {
-  text-align: center;
-}
-
-.postArea p {
-  display: inline-block;
-  text-align: left;
-}
-
 .footer-logo {
   margin-bottom: 10px;
 }
 
-/*
-details
-================================================ */
 details {
   border: 1px solid #aaa;
   border-radius: 4px;
@@ -95,22 +78,10 @@ details[open] summary {
   margin-right: 260px;
 }
 
-.font_red {
-  color: #ff0000;
-}
-
-/*
-image
-================================================ */
-
 img {
   width: 60%;
   height: 60%;
 }
-
-/*
-COLORS
-================================================ */
 
 /* コピーライト */
 .copyright {
